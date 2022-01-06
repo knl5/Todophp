@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}raezk{% endblock %}
+
+{% block body %}
+    {% dump(list) %}
+    <ul>
+        {% for element in list %}
+            <li>{{ element }}</li>
+        {% endfor %}
+    <ul>
+        
+{% endblock %}
