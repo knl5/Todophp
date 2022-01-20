@@ -3,11 +3,17 @@
 {% block title %}raezk{% endblock %}
 
 {% block body %}
-    {% dump(list) %}
+<div class="todo">
+    <h1>Hello</h1>
+    <form action="{{ url('todolist_add') }}" method="get">
+        <input name="value">
+        <button>valid</button>
+    </form>
+
     <ul>
         {% for element in list %}
-            <li>{{ element }}</li>
+            <li>{{ element }} <a href="{{ url('todolist_delete', {id: loop.index0}) }}"> Delete </a></li>
         {% endfor %}
     <ul>
-        
+</div>   
 {% endblock %}
